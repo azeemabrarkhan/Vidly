@@ -1,6 +1,6 @@
 const jwtDecode = require("jwt-decode");
-import http from "./httpService";
-import config from "../config.json";
+const http = require("./httpService");
+const config = require("../config.json");
 
 const apiEndPoint = (process.env.REACT_APP_API_URL || config.apiUrl) + "/auth";
 const tokenKey = "token";
