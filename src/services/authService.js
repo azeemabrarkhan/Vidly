@@ -1,4 +1,4 @@
-const jwtDecode = require("jwt-decode");
+const jwtDecode = require("jwt-decode").jwtDecode;
 const http = require("./httpService").default;
 const config = require("../config.json");
 
