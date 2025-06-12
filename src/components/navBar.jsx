@@ -19,14 +19,14 @@ const NavBar = ({ user }) => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className="collapse navbar-collapse"
+          id="navbarNav"
+          style={{ justifyContent: "space-between" }}
+        >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/movies"
-              >
+              <NavLink className="nav-link" aria-current="page" to="/movies">
                 Movies
               </NavLink>
             </li>
@@ -40,6 +40,8 @@ const NavBar = ({ user }) => {
                 Rentals
               </NavLink>
             </li> */}
+          </ul>
+          <ul className="navbar-nav">
             {!user && (
               <React.Fragment>
                 <li className="nav-item">
@@ -56,10 +58,8 @@ const NavBar = ({ user }) => {
             )}
             {user && (
               <React.Fragment>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/profile">
-                    {user.name}
-                  </NavLink>
+                <li>
+                  <div className="nav-link">{user.name}</div>
                 </li>
                 <li>
                   <NavLink className="nav-link" to="/logout">
