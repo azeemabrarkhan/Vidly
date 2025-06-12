@@ -1,6 +1,10 @@
-const jwtDecode = require("jwt-decode");
-const http = require("./httpService").default;
-const config = require("../config.json");
+// const jwtDecode = require("jwt-decode");
+// const http = require("./httpService").default;
+// const config = require("../config.json");
+
+import { jwtDecode } from "jwt-decode";
+import http from "./httpService";
+import config from "../config.json";
 
 const apiEndPoint = (process.env.REACT_APP_API_URL || config.apiUrl) + "/auth";
 const tokenKey = "token";
@@ -28,7 +32,7 @@ export function getCurrentUser() {
     console.log(tokenKey);
     const jwt = localStorage.getItem(tokenKey);
     console.log(jwt);
-    const user = jwtDecode.jwtDecode(jwt);
+    const user = jwtDecode(jwt);
     console.log(user);
     return user;
   } catch (error) {
