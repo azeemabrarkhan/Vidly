@@ -1,7 +1,8 @@
 import http from "./httpService";
 import config from "../config.json";
 
-const apiEndPoint = config.apiUrl + "/movies";
+const apiEndPoint =
+  (process.env.REACT_APP_API_URL || config.apiUrl) + "/movies";
 
 function movieUrl(id) {
   return `${apiEndPoint}/${id}`;
