@@ -1,4 +1,4 @@
-const jwtDecode = require("jwt-decode").jwtDecode;
+const jwtDecode = require("jwt-decode");
 const http = require("./httpService").default;
 const config = require("../config.json");
 
@@ -28,7 +28,7 @@ export function getCurrentUser() {
     console.log(tokenKey);
     const jwt = localStorage.getItem(tokenKey);
     console.log(jwt);
-    const user = jwtDecode(jwt);
+    const user = jwtDecode.jwtDecode(jwt);
     console.log(user);
     return user;
   } catch (error) {
