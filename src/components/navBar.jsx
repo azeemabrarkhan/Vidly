@@ -30,7 +30,7 @@ const NavBar = ({ user }) => {
                 Movies
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink className="nav-link" to="/customers">
                 Customers
               </NavLink>
@@ -39,7 +39,7 @@ const NavBar = ({ user }) => {
               <NavLink className="nav-link" to="/rentals">
                 Rentals
               </NavLink>
-            </li>
+            </li> */}
             {!user && (
               <React.Fragment>
                 <li className="nav-item">
