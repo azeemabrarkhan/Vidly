@@ -1,4 +1,4 @@
-const jwtDecode = require("jwt-decode/build/cjs");
+const jwtDecode = require("jwt-decode");
 const http = require("./httpService");
 const config = require("../config.json");
 
