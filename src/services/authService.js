@@ -1,6 +1,9 @@
-import { jwtDecode } from "jwt-decode";
-import http from "./httpService";
-import config from "../config.json";
+const jwtDecode = require("jwt-decode/build/cjs");
+const http = require("./httpService");
+const config = require("../config.json");
+
+// import http from "./httpService";
+// import config from "../config.json";
 
 const apiEndPoint = (process.env.REACT_APP_API_URL || config.apiUrl) + "/auth";
 const tokenKey = "token";
