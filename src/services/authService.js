@@ -1,7 +1,3 @@
-// const jwtDecode = require("jwt-decode").default;
-// const http = require("./httpService").default;
-// const config = require("../config.json");
-
 import jwtDecode from "jwt-decode";
 import http from "./httpService";
 import config from "../config.json";
@@ -29,14 +25,10 @@ export function logout() {
 
 export function getCurrentUser() {
   try {
-    console.log(tokenKey);
     const jwt = localStorage.getItem(tokenKey);
-    console.log(jwt);
     const user = jwtDecode(jwt);
-    console.log(user);
     return user;
   } catch (error) {
-    console.log(error);
     return null;
   }
 }
